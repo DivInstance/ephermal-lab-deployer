@@ -110,13 +110,13 @@ divyaranjansahoo@IhsuhK:/ephermal-lab-deployer $ python -m cli start metasploit-
 ✅ Lab 'metasploit-android' deployed successfully!
    - Connect to the device with: adb connect localhost:5555
 
-divyaranjansahoo@IhsuhK:/ephermal-lab-deployer $python -m cli status metasploit-android 
+divyaranjansahoo@IhsuhK:/ephermal-lab-deployer $ python -m cli status metasploit-android 
 📊 Checking status for lab: metasploit-android...
 NAME             IMAGE                                             COMMAND                  SERVICE      CREATED          STATUS          PORTS
 metasploit-lab   metasploitframework/metasploit-framework:latest   "docker/entrypoint.s…"   metasploit   23 minutes ago   Up 5 minutes    0.0.0.0:55553->4444/tcp, [::]:55553->4444/tcp
 
 
-divyaranjansahoo@IhsuhK:/ephermal-lab-deployer $python -m cli stop metasploit-android 
+divyaranjansahoo@IhsuhK:/ephermal-lab-deployer $ python -m cli stop metasploit-android 
 python cli.py stop metasploit-android
 🛑 Stopping lab: metasploit-android...
 ✅ Lab 'metasploit-android' has been stopped and cleaned up.
