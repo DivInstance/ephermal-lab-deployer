@@ -51,7 +51,7 @@ def start(lab_name):
     command = ["docker-compose", "-f", lab_file_path, "up", "-d"]
 
     try:
-        subprocess.run(command, check=True, capture_output=True, text=True)
+        subprocess.run(command, check=True) 
         click.echo(click.style(f"✅ Lab '{lab_name}' deployed successfully!", fg="green"))
 
         if "web-vuln" in lab_name or "juice-shop" in lab_name:
@@ -85,7 +85,7 @@ def stop(lab_name):
     command = ["docker-compose", "-f", lab_file_path, "down"]
 
     try:
-        subprocess.run(command, check=True, capture_output=True, text=True)
+        subprocess.run(command, check=True)
         click.echo(click.style(f"✅ Lab '{lab_name}' has been stopped and cleaned up.", fg="green"))
     except subprocess.CalledProcessError as e:
         click.echo(click.style(f"🔥 Failed to stop '{lab_name}'.", fg="red"))
